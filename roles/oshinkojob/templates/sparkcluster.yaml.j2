@@ -12,7 +12,7 @@ data:
 {% if spark_image %}
     customImage: "{{ spark_image }}"
 {% elif build_type|lower == 'python36' %}
-    customImage: "quay.io/radanalyticsio/openshift-spark-py36:2.4-latest"
+    customImage: "quay.io/opendatahub/spark-cluster-image:spark22python36"
 {% endif %}
     worker:
       instances: "{{ executors }}"
